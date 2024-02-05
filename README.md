@@ -14,16 +14,16 @@ It solves the late checkout issue but also potentially hurts Getaround/owners re
 
 The Product Manager needs to decide:
 
-- threshold: how long should the minimum delay be?
-- scope: should the feature be enabled for all types of checkout? (multiple checkout types are possible: mobile, connect or paper)
+- Threshold: How long should the minimum delay be?
+- Scope: Should the feature be enabled for all types of checkout : mobile, connect or paper ? (although paper is negligible)
 
 ## Objectives
 
 Two main elements will compose this project:
 
-(i) A dashboard allowing for comparisons bewteen different thresholds and scopes will allow the product manager to choose the best values for this new feature. 
+(i) A dashboard allowing for comparisons bewteen different thresholds and scopes will allow the product manager to choose the best course of action.
 
-(ii) An API with two endpoints allowing for the prediction of the ideal rental price per day for vehicle given its features.
+(ii) An API with two endpoints (single and batch) allowing for the prediction of the ideal rental price per day for vehicle given its features.
 
 
 ## Scope
@@ -33,27 +33,40 @@ This project focuses on a getaround dataset available [here](https://full-stack-
 
 ### Dashboard
 This dashboard was made using streamlit so it can be run locally using the following command: 
+
 ```streamlit run --server.port 4000 app.py```
 Given that the required packages are installed
+
 
 ### API_predictions
 This feature is build so as to be deployed in a docker container inside a Heroku server, although it can also be run locally. 
 
 #### Run locally
 To run this locally I would still recomend building a docker container by going going into the directory and runing 
+
 ```docker build . -t <image_name>```
+
 and then
+
 ```docker run -it -v "$(pwd):/home/app" -p 4000:4000 -e PORT=4000 <image_name>```
+
 **Then make sure that you open your browser and type into the browser 0.0.0.0:4000/docs to access the endpoints and see de documentaion**
 
 #### Run on server
 This depends on the server you choose to run the app in, but for heroku:
+
 - Place yourself in the API_predictions folder
+  
 - Create a new heroku application
+  
 ```heroku create -a <app name>```
+
 - Push the container into the server
+  
 ``` heroku container:push web -a <app name>```
+
 - Release the container
+  
 ``` heroku container:release web -a <app name>```
 
 *Note that the ml_model.ipynb contains all the EDA, preprocessing and training for the machine learning model used in the api. The preprocessing and the model are then safed to the model.pkl file which is then copied and used in the application*
