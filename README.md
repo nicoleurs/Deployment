@@ -57,7 +57,8 @@ This depends on the server you choose to run the app in, but for heroku:
 
 - Place yourself in the API_predictions folder
   
-- Create a new heroku application
+- Create a new heroku applicationcurl -i -H "Content-Type: application/json" -X POST -d '{"model_key": "Citroën", "mileage": 140411, "engine_power": 100, "fuel": "diesel", "paint_color": "black", "car_type": "convertible", "private_parking_available": true, "has_gps": true, "has_air_conditioning": true, "automatic_car": true, "has_getaround_connect": true, "has_speed_regulator": true, "winter_tires": true }' 0.0.0.0:4000/predict
+
   
 ```heroku create -a <app name>```
 
@@ -68,6 +69,12 @@ This depends on the server you choose to run the app in, but for heroku:
 - Release the container
   
 ``` heroku container:release web -a <app name>```
+
+If the installation worked you can try out the endpoints on your browser or with curl, for example: 
+
+```curl -i -H "Content-Type: application/json" -X POST -d '{"model_key": "Citroën", "mileage": 140411, "engine_power": 100, "fuel": "diesel", "paint_color": "black", "car_type": "convertible", "private_parking_available": true, "has_gps": true, "has_air_conditioning": true, "automatic_car": true, "has_getaround_connect": true, "has_speed_regulator": true, "winter_tires": true }' 0.0.0.0:4000/predict```
+
+Should return a prediction ! 
 
 *Note that the ml_model.ipynb contains all the EDA, preprocessing and training for the machine learning model used in the api. The preprocessing and the model are then safed to the model.pkl file which is then copied and used in the application*
 
