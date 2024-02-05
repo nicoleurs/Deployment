@@ -76,7 +76,7 @@ If the installation worked you can try out the endpoints on your browser or with
 
 Should return a prediction ! 
 
-*Note that the ml_model.ipynb contains all the EDA, preprocessing and training for the machine learning model used in the api. The preprocessing and the model are then safed to the model.pkl file which is then copied and used in the application*
+*Note that the ml_model.ipynb contains all the EDA, preprocessing and training for the machine learning model used in the API. The preprocessing and the model are then saved to the model.pkl file which is then copied and used in the application*
 
 ## Contributors
 
