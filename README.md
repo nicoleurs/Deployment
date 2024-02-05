@@ -50,7 +50,7 @@ and then
 
 ```docker run -it -v "$(pwd):/home/app" -p 4000:4000 -e PORT=4000 <image_name>```
 
-**Then make sure that you open your browser and type into the browser 0.0.0.0:4000/docs to access the endpoints and see de documentaion**
+**Then make sure that you open your browser and type into the browser search bar ```0.0.0.0:4000/docs``` to access the endpoints and see de documentaion**
 
 #### Run on server
 This depends on the server you choose to run the app in, but for heroku:
