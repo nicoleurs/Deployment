@@ -1,7 +1,7 @@
 # GetAround Analysis
 
 ## Project description
-GetAround is the Airbnb for cars. You can rent cars from any person for a few hours to a few days! Founded in 2009, this company has known rapid growth. In 2019, they count over 5 million users and about 20K available cars worldwide.
+GetAround is the Airbnb for cars. You can rent cars from any person for a few hours to a few days.
 
 When using Getaround, drivers book cars for a specific time period, from an hour to a few days long. They are supposed to bring back the car on time, but it happens from time to time that drivers are late for the checkout.
 
@@ -21,9 +21,9 @@ The Product Manager needs to decide:
 
 Two main elements will compose this project:
 
-(i) A dashboard allowing for comparisons bewteen diferent thresholds and scopes will allow the product manager to choose the best values for this new feature. 
+(i) A dashboard allowing for comparisons bewteen different thresholds and scopes will allow the product manager to choose the best values for this new feature. 
 
-(ii) An API with two endpoints allowing for the prediction of the ideal rental price per day for vahicle given its features.
+(ii) An API with two endpoints allowing for the prediction of the ideal rental price per day for vehicle given its features.
 
 
 ## Scope
@@ -38,8 +38,6 @@ Given that the required packages are installed
 
 ### API_predictions
 This feature is build so as to be deployed in a docker container inside a Heroku server, although it can also be run locally. 
-
-*Note that the ml_model.ipynb contains all the EDA, preprocessing and training for the machine learning model used in the api. The preprocessing and the model are then safed to the model.pkl file which is then copied and used in the application*
 
 #### Run locally
 To run this locally I would still recomend building a docker container by going going into the directory and runing 
@@ -57,6 +55,8 @@ This depends on the server you choose to run the app in, but for heroku:
 ``` heroku container:push web -a <app name>```
 - Release the container
 ``` heroku container:release web -a <app name>```
+
+*Note that the ml_model.ipynb contains all the EDA, preprocessing and training for the machine learning model used in the api. The preprocessing and the model are then safed to the model.pkl file which is then copied and used in the application*
 
 ## Contributors
 
