@@ -27,7 +27,9 @@ Two main elements will compose this project:
 
 
 ## Scope
-This project focuses on a getaround dataset available [here](https://full-stack-assets.s3.eu-west-3.amazonaws.com/Deployment/get_around_delay_analysis.xlsx) 
+This project focuses on two getaround datasets
+- for the dashboard: [dealy analysis](https://full-stack-assets.s3.eu-west-3.amazonaws.com/Deployment/get_around_delay_analysis.xlsx)
+- for the API: [pricing optimization](https://full-stack-assets.s3.eu-west-3.amazonaws.com/Deployment/get_around_pricing_project.csv)
 
 ## Features
 
