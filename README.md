@@ -8,7 +8,7 @@ When using Getaround, drivers book cars for a specific time period, from an hour
 Late returns at checkout can generate high friction for the next driver if the car was supposed to be rented again on the same day : Customer service often reports users unsatisfied because they had to wait for the car to come back from the previous rental or users that even had to cancel their rental because the car wasn’t returned on time.
 
 ## Project context
-In order to mitigate those issues a minimum delay between two rentals coould be implemented. A car won’t be displayed in the search results if the requested checkin or checkout times are too close from an already booked rental.
+In order to mitigate those issues a minimum delay between two rentals could be implemented. A car won’t be displayed in the search results if the requested checkin or checkout times are too close from an already booked rental.
 
 It solves the late checkout issue but also potentially hurts Getaround/owners revenues: we need to find the right trade off.
 
