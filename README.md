@@ -57,8 +57,7 @@ This depends on the server you choose to run the app in, but for heroku:
 
 - Place yourself in the API_predictions folder
   
-- Create a new heroku applicationcurl -i -H "Content-Type: application/json" -X POST -d '{"model_key": "Citroën", "mileage": 140411, "engine_power": 100, "fuel": "diesel", "paint_color": "black", "car_type": "convertible", "private_parking_available": true, "has_gps": true, "has_air_conditioning": true, "automatic_car": true, "has_getaround_connect": true, "has_speed_regulator": true, "winter_tires": true }' 0.0.0.0:4000/predict
-
+- Create a new heroku application
   
 ```heroku create -a <app name>```
 
